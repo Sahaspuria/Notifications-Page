@@ -53,11 +53,11 @@ body {
   align-items: center;
   padding: 2rem;
 }
-.container .notifications__header--Title h2 {
+.container .notifications__header--Title h1 {
   font-size: 1.4rem;
   color: #222;
 }
-.container .notifications__header--Title h2 span {
+.container .notifications__header--Title h1 span {
   font-size: 1rem;
   color: hsl(0deg, 0%, 100%);
   background-color: hsl(219deg, 85%, 26%);
