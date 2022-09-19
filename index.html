@@ -132,7 +132,16 @@
       Coded by <a href="https://github.com/sahaspuria">Sahaspuria</a>.
     </div>
   </footer> -->
-  <script src="/main.js"></script>
+  <script>
+    const btnMark = document.querySelector(".notifications__header--read");
+    const count = document.querySelector(".count");
+    const userfield = document.querySelectorAll(".userfield");
+
+    btnMark.addEventListener("click", function () {
+      count.textContent = 0;
+      userfield.forEach((item) => item.classList.remove("active"));
+    });
+  </script>
 </body>
 
 </html>
