@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+
+$Mobile: 375px;
+$Desktop: 1440px;
+
+// colors
+$Red: hsl(1, 90%, 64%);
+$Blue: hsl(219, 85%, 26%);
+
+// White-Neutral
+$White: hsl(0, 0%, 100%);
+$Very-light-grayish-blue: hsl(210, 60%, 98%);
+$Light-grayish-blue-1: hsl(211, 68%, 94%);
+$Light-grayish-blue-2: hsl(205, 33%, 90%);
+$Grayish-blue: hsl(219, 14%, 63%);
+$Dark-grayish-blue: hsl(219, 12%, 42%);
+$Very-dark-blue: hsl(224, 21%, 14%);
+
+// main layout
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 90%;
+  font-family: "Plus Jakarta Sans";
+
+  @media only screen and (max-width: $Mobile) {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  background-color: $Very-light-grayish-blue;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// utility classes
+.link--hover {
+  &:hover {
+    color: $Blue;
+  }
+}
+
+.link--active {
+  color: $Blue;
+}
+
+// ---------------->
+
+.container {
+  background-color: $White;
+  height: 100%;
+  max-width: 50rem;
+  width: 45rem;
+  border-radius: 10px;
+
+  @media only screen and (max-width: $Mobile) {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .notifications {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+
+    &__header {
+      &--Title h2 {
+        font-size: 1.4rem;
+        color: #222;
+        span {
+          font-size: 1rem;
+          color: $White;
+          background-color: $Blue;
+          padding: 1px 7px;
+          margin-left: 2px;
+          border-radius: 0.5rem;
+        }
+      }
+      &--read {
+        color: $Dark-grayish-blue;
+        cursor: pointer;
+
+        &:hover {
+          color: $Blue;
+        }
+      }
+    }
+  }
+
+  .userfield {
+    display: flex;
+    padding: 1rem;
+    margin: 0.5rem 2rem;
+
+    .user {
+      &__profile {
+        display: block;
+        width: 3rem;
+        margin-right: 1rem;
+        & img {
+          width: 3rem;
+        }
+      }
+
+      &__text {
+        color: $Dark-grayish-blue;
+
+        span:nth-child(1) {
+          color: #222;
+          font-weight: 800;
+        }
+        span:nth-child(2) {
+          font-weight: 800;
+        }
+      }
+      &__time-ago {
+        color: $Grayish-blue;
+        font-size: 0.9rem;
+      }
+
+      &__dm {
+        max-width: 100%;
+        color: $Dark-grayish-blue;
+        margin-top: 0.8rem;
+        padding: 1rem;
+        border: 1px solid $Light-grayish-blue-2;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        &:hover {
+          background-color: $Light-grayish-blue-1;
+        }
+      }
+      &__uploads {
+        display: block;
+        margin-left: auto;
+        width: 2.4rem;
+
+        & img {
+          width: 100%;
+
+          &:hover {
+            border: 2px solid $Light-grayish-blue-1;
+            border-radius: 5px;
+            scale: 1.2;
+          }
+        }
+      }
+    }
+  }
+  .active {
+    background-color: $Very-light-grayish-blue;
+    border-radius: 0.5rem;
+  }
+}

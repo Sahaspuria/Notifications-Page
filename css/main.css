@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 90%;
+  font-family: "Plus Jakarta Sans";
+}
+@media only screen and (max-width: 375px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+body {
+  background-color: hsl(210deg, 60%, 98%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link--hover:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+
+.link--active {
+  color: hsl(219deg, 85%, 26%);
+}
+
+.container {
+  background-color: hsl(0deg, 0%, 100%);
+  height: 100%;
+  max-width: 50rem;
+  width: 45rem;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 375px) {
+  .container {
+    width: 100vw;
+    height: 100vh;
+  }
+}
+.container .notifications {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+.container .notifications__header--Title h2 {
+  font-size: 1.4rem;
+  color: #222;
+}
+.container .notifications__header--Title h2 span {
+  font-size: 1rem;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(219deg, 85%, 26%);
+  padding: 1px 7px;
+  margin-left: 2px;
+  border-radius: 0.5rem;
+}
+.container .notifications__header--read {
+  color: hsl(219deg, 12%, 42%);
+  cursor: pointer;
+}
+.container .notifications__header--read:hover {
+  color: hsl(219deg, 85%, 26%);
+}
+.container .userfield {
+  display: flex;
+  padding: 1rem;
+  margin: 0.5rem 2rem;
+}
+.container .userfield .user__profile {
+  display: block;
+  width: 3rem;
+  margin-right: 1rem;
+}
+.container .userfield .user__profile img {
+  width: 3rem;
+}
+.container .userfield .user__text {
+  color: hsl(219deg, 12%, 42%);
+}
+.container .userfield .user__text span:nth-child(1) {
+  color: #222;
+  font-weight: 800;
+}
+.container .userfield .user__text span:nth-child(2) {
+  font-weight: 800;
+}
+.container .userfield .user__time-ago {
+  color: hsl(219deg, 14%, 63%);
+  font-size: 0.9rem;
+}
+.container .userfield .user__dm {
+  max-width: 100%;
+  color: hsl(219deg, 12%, 42%);
+  margin-top: 0.8rem;
+  padding: 1rem;
+  border: 1px solid hsl(205deg, 33%, 90%);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+.container .userfield .user__dm:hover {
+  background-color: hsl(211deg, 68%, 94%);
+}
+.container .userfield .user__uploads {
+  display: block;
+  margin-left: auto;
+  width: 2.4rem;
+}
+.container .userfield .user__uploads img {
+  width: 100%;
+}
+.container .userfield .user__uploads img:hover {
+  border: 2px solid hsl(211deg, 68%, 94%);
+  border-radius: 5px;
+  scale: 1.2;
+}
+.container .active {
+  background-color: hsl(210deg, 60%, 98%);
+  border-radius: 0.5rem;
+}/*# sourceMappingURL=main.css.map */
